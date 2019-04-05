@@ -15,13 +15,11 @@ func ConcatSlice(sliceToConcat []byte) string {
 }
 
 //Encrypt
-func Encrypt(sliceToConcat []byte, ceaserCount int) string {
-	// var dummy strings
-	var dummy string
+func Encrypt(sliceToConcat []byte, ceaserCount int) {
+
 	for index := 0; index < len(sliceToConcat); index++ {
-		dummy = dummy + string(sliceToConcat[index]+byte(ceaserCount))
+		sliceToConcat[index] = sliceToConcat[index] + byte(ceaserCount)
 	}
-	return dummy
 }
 
 //EZGreetings
